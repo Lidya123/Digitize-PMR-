@@ -1,0 +1,8 @@
+#modal{
+    background-color: lightgray;
+    border-color: darkgrey;
+}
+
+.dropdown-menu{
+    min-width: 10px !important;
+}
