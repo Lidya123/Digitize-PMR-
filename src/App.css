@@ -1,8 +1,17 @@
 #modal{
+<<<<<<< HEAD
     background-color: lightgray;
     border-color: darkgrey;
 }
 
 .dropdown-menu{
     min-width: 10px !important;
+=======
+  background-color: lightgray;
+  border-color: darkgrey;
+}
+
+.dropdown-menu{
+  min-width: 10px !important;
+>>>>>>> 470f629 (change 1)
 }

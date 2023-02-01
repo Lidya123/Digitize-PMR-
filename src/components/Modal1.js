@@ -15,20 +15,40 @@ const Modal1 =() => {
         setModal(true);
     }
 // crypto-js crypto-es
+<<<<<<< HEAD
     const keyGen= ()=>{
         const NodeRSA = require("node-rsa");
         const key = new NodeRSA({b : 512});
+=======
+    function keyGen(){
+        const NodeRSA = require("node-rsa");
+        const key = new NodeRSA({b : 1024});
+>>>>>>> 470f629 (change 1)
 
         var public_key = key.exportKey("public");
         var private_key = key.exportKey("private");
 
         console.log(public_key+":\n"+private_key+"\n");
+<<<<<<< HEAD
         let key_public = new NodeRSA(public_key);
         let key_private = new NodeRSA(private_key);
 
         return key_public;
     } 
 
+=======
+        // let key_public = new NodeRSA(public_key);
+        // let key_private = new NodeRSA(private_key);
+
+        return public_key;
+    } 
+
+    // function keyGen(){
+    //     const publicKey = 123456789;
+    //     return publicKey;
+    // }
+
+>>>>>>> 470f629 (change 1)
     return (
         <>
          {!modal ? (
@@ -126,7 +146,11 @@ const Modal1 =() => {
                     <h3>Registeration Successfull!</h3>
                         </div>
                         <p className='body'>
+<<<<<<< HEAD
                             Your Public key : {keyGen} <br/>
+=======
+                            Your Public key : {keyGen()} <br/>
+>>>>>>> 470f629 (change 1)
                             Your Private key : private_key <br/>
                             Your nft ID : patient_nft_id
                         </p>
