@@ -1,17 +1,70 @@
 #modal{
-<<<<<<< HEAD
     background-color: lightgray;
     border-color: darkgrey;
 }
 
 .dropdown-menu{
-    min-width: 10px !important;
-=======
-  background-color: lightgray;
-  border-color: darkgrey;
+  min-width: 10px !important;
+  background-color: rgb(4, 38, 86);
+  border-color: rgb(4, 38, 86);
+  margin-bottom: 20px;
+  color: #ffff;
 }
 
 .dropdown-menu{
   min-width: 10px !important;
->>>>>>> 470f629 (change 1)
+}
+
+.modal-box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bg-nav {
+  background-image: linear-gradient( 109.6deg,rgba(110,123,251,1) 91.1% );
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px; */
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+  background-image: url(trust.jpg);
+}
+
+.threeD
+{
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 1.5em;
+  color: rgb(4, 38, 86);;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191,
+      1px 5px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.trans{
+  font-size: 2em !important;
+  animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+.btn{
+  box-shadow:  1px 1px  #696868,
+      1px 2px 1px  #696868,
+      1px 3px 1px #696868,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
 }

@@ -1,37 +1,37 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './Modal.css'
 
-const Modal3 = () => {
-
-    const [modal, setModal] = useState(false);
+const Modal3 = ({handleSubmit, modal, setModal}) => {
 
     return (
-        <div>
-        {!modal ? (
-            <div className="container-lg">
-        <p>Researcher Data</p>
-        <form id="modal">
+<div>
+    {!modal ? (
+    <div className="container-lg">
+        <p className='threeD'>Researcher Data</p>
+        <form id="modal" className='modal-box' onSubmit={handleSubmit}>
+        <div className='row'>
+            <div className='column left'>
             <div className="custom-file m-4">
-            <input type="file" className="custom-file-input" id="customFile" />
+            <input type="file" className="custom-file-input" name='profile' />
             <label className="custom-file-label mr-5" for="customFile">Choose profile image</label>
             </div> 
 
             <div className="row m-3">
                 <div className="col">
-                <input type="text" className="form-control" placeholder="First name" />
+                <input type="text" className="form-control" name='fname' placeholder="First name" />
                 </div>
                 <div className="col">
-                <input type="text" className="form-control" placeholder="Middle name" />
+                <input type="text" className="form-control" name='mname' placeholder="Middle name" />
                 </div>
                 <div className="col">
-                <input type="text" className="form-control" placeholder="Last name" />
+                <input type="text" className="form-control" name='lname' placeholder="Last name" />
                 </div>
             </div>
 
             <div className="row m-3">
                 <div className="col">
                 <label for="dob">Date of birth :</label>
-                <input type="date" className="form-control" id="inputDate" />
+                <input type="date" className="form-control" name='dob' />
                 </div>
                 <div>
 
@@ -65,47 +65,46 @@ const Modal3 = () => {
                 </div>
             </div>
 
-        <div className="row m-3">
-            <div className="col">
-                <label className="mr-4" >Gender?</label>
-                <label className="radio-inline"> <input type="radio" name="gender" value="female" /> Female</label> &nbsp;
-                <label className="radio-inline"><input type="radio" name="gender" value="male" /> Male</label>
-            </div>
-            <div className="col">
-                <label className="mr-4">Married?</label>
-                <label className="radio-inline"> <input type="radio" name="married" value="yes" /> Yes</label> &nbsp;
-                <label className="radio-inline"><input type="radio" name="married" value="no" /> No</label>
-            </div> 
-            <div className = "mt-3">
-            <input type="number" className="form-control" placeholder="Emergency contact number" />
-            </div>
-                <button type="submit" onClick={()=> {setModal(true)}} className="btn btn-outline-secondary mt-4 mb-4">Submit</button>
-            </div>
+            <div className="row m-3">
+                <div className="col">
+                    <label className="mr-4" >Gender?</label>
+                    <label className="radio-inline"> <input type="radio" name="gender" value="female" /> Female</label> &nbsp;
+                    <label className="radio-inline"><input type="radio" name="gender" value="male" /> Male</label>
+                </div>
+                <div className="col">
+                    <label className="mr-4">Married?</label>
+                    <label className="radio-inline"> <input type="radio" name="married" value="yes" /> Yes</label> &nbsp;
+                    <label className="radio-inline"><input type="radio" name="married" value="no" /> No</label>
+                </div> 
+                <div className = "mt-3">
+                    <input type="number" className="form-control" placeholder="Emergency contact number" />
+                    </div>
+                        <button style={{"color": "white"}} className="btn btn-outline-dark mt-4 mb-2">Submit</button>
+                    </div>
+                </div>
+            <div className='column right'></div> </div>
         </form>
     </div>
-
-        ) : (
-                    <div className='modalBackground'>
-                    <div className='modalContainer'>
-                        <div className='title'>
-                                <div className='text-right mr-1'>
-                                    <button className='btn btn-outline-danger' onClick={() => {setModal(false)}}>
-                                        X
-                                    </button>
-                                </div>
-                            <div className="title">
-                            <h3>Registeration Successfull!</h3>
-                                </div>
-                                <p className='body'>
-                                    Your Public key : public_key <br/>
-                                    Your Private key : private_key <br/>
-                                    Your nft ID : res_nft_id
-                                </p>
-                                    </div>
-                                </div>
-                            </div>
-        )}
+    ) : (
+        <div className='modalBackground'>
+            <div className='modalContainer'>
+                <div className='title'>
+                    <div className='text-right mr-1'>
+                         <button className='btn btn-outline-danger' onClick={() => {setModal(false)}}> X </button>
+                    </div>
+                    <div className="title">
+                        <h3>Registeration Successfull!</h3>
+                    </div>
+                        <p className='body'>
+                        Your Public key : public_key <br/>
+                        Your Private key : private_key <br/>
+                        Your nft ID : res_nft_id
+                    </p>
+                </div>
+            </div>
         </div>
+        )}
+</div>
         
     );
 }

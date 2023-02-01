@@ -1,17 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-<<<<<<< HEAD
-const WriteData =() =>{
-    return (
-        <div className='container-lg'>
-            <h1>Write prescription here !</h1>
-=======
 const WriteData =() => {
+
+    const navigate = useNavigate();
+    const promptMsg = () => {
+        if (window.confirm('Really go to another page?'))
+        {
+            navigate('/fetchData');
+        }
+    }
+
     return (
         <div className='container-lg'>
             <h1>Write data !</h1>
-            <button>Add</button>
->>>>>>> 470f629 (change 1)
+            <button className='btn btn-outline-dark ' onClick={promptMsg}>Add</button>
         </div>
     );
 }
