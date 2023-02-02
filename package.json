@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "digitize_pmr",
-=======
   "name": "digitize-pmr",
->>>>>>> 470f629 (change 1)
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,28 +11,14 @@
     "buffer": "^6.0.3",
     "constants": "^0.0.2",
     "crypto-browserify": "^3.12.0",
-<<<<<<< HEAD
-    "crypto-es": "^1.2.7",
-=======
->>>>>>> 470f629 (change 1)
     "node-rsa": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
-<<<<<<< HEAD
-    "react-scripts": "5.0.1",
-    "stream": "^0.0.2",
-    "web-vitals": "^2.1.4"
-  },
-"browser" : {
-  "crypto" : false
-},
-=======
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4",
     "webpack": "^5.75.0"
   },
->>>>>>> 470f629 (change 1)
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
