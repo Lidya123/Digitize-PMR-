@@ -5,7 +5,7 @@ const WriteData =() => {
 
     const navigate = useNavigate();
     const promptMsg = () => {
-        if (window.confirm('Really go to another page?'))
+        if (window.confirm('Are you sure to update?'))
         {
             navigate('/fetchData');
         }

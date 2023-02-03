@@ -17,6 +17,7 @@
 
 .modal-box {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 2em;
 }
 
 .bg-nav {
@@ -29,11 +30,13 @@
 }
 
 .left {
-  width: 70%;
+  width: 60%;
+  background-color: rgb(4, 38, 86);
+  color: #ffff;
 }
 
 .right {
-  width: 30%;
+  width: 40%;
   background-image: url(trust.jpg);
 }
 
@@ -52,11 +55,6 @@
   1px 22px 10px rgba(16,16,16,0.2),
   1px 25px 35px rgba(16,16,16,0.2),
   1px 30px 60px rgba(16,16,16,0.4);
-}
-
-.trans{
-  font-size: 2em !important;
-  animation: 3s ease-in 1s infinite reverse both running slidein;
 }
 
 .btn{

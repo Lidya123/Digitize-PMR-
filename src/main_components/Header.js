@@ -23,24 +23,23 @@ function Header () {
 
     return (
         <>
-        <nav className="navbar navbar-light bg-light">
-
         <nav className="navbar navbar-light bg-nav">
+
+        <nav className="navbar navbar-light">
         <img className='mt-2' src="https://cpha.com/wp-content/uploads/2017/10/Digital-Health-Logo.png" alt="BigCo Inc. logo" width="200" height="60"/>
-        <form className="form-inline ml-auto">
-            <p className="nav-item dropdown btn btn-secondary m-2">
-            <a className="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Access
-            </a>
-            
+            <form className="form-inline float-right mx-">
+            <p className="nav-item dropdown">
+
+            <button className='btn btn-secondary' data-toggle="dropdown" >Access</button>
             <div className="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdown">
                 <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleUsrEntry}> Patient</Link>
-                {/* <p className='dropdown-item' onClick={()=> <Pop toggleEntry = {toggleUsrEntry} />}> Patient</p> */}
-                <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleDocEntry}>Doctor</Link>
+                <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleDocEntry}>Doctor</Link>    
             </div>
+            <Link to='/home' className="btn btn-secondary float-right mx-5 row-6
+            ">Home</Link>
             </p>
-            <Link to='/home' className="btn btn-secondary mr-sm-2 m-2">Home</Link>
         </form>
+        </nav>
         </nav>
 
         {usrModal && (
@@ -95,7 +94,7 @@ function Header () {
                             </form >
                         </div>
                 )}
-                </nav>
+                {/* </nav> */}
             </>
         );
     }
