@@ -1,7 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Modal.css";
 
 const Modal1 = ({ handleSubmit, modal, setModal }) => {
+
+  const [formfields, setFormfields] = useState({
+      'profile' : '',
+      'fname': '',
+      'dob' : '', 
+      'gender': ''
+    });
+
   // crypto-js crypto-es
   // function keyGen(){
   //     const NodeRSA = require("node-rsa");
@@ -22,16 +30,16 @@ const Modal1 = ({ handleSubmit, modal, setModal }) => {
             <div className="container-lg">
               <p className="threeD">Patient Data</p>
               <div id="modal" className="row modal-box">
-            <form className="column left" onSubmit={handleSubmit}>
+            <form className="column left" onSubmit={handleSubmit} enctype="multipart/form-data">
                   {/* Profile photo */}
-                  <div className="custom-file m-4">
-                  <input type="file" className="custom-file-input" name='profile' />
-                  <label className="custom-file-label mr-5" for="customFile">Choose profile image</label>
+                  <div className="m-4">
+                  <label>Profile Image : </label><br/>
+                  <input type="file" name='profile' value={formfields.profile} onChange={(e)=> setFormfields({...formfields, profile : e.target.value})}/>
                   </div> 
                   {/* Name */}
                   <div className="row m-3">
                       <div className="col">
-                      <input type="text" className="form-control" name='fname' placeholder="First name" />
+                      <input type="text" className="form-control" name='fname' value={formfields.fname} onChange={(e)=> setFormfields({...formfields, fname : e.target.value})} placeholder="First name" />
                       </div>
                       <div className="col">
                       <input type="text" className="form-control" name='mname' placeholder="Middle name" />
@@ -44,8 +52,8 @@ const Modal1 = ({ handleSubmit, modal, setModal }) => {
                 <div className="row m-3">
                   {/* Date of Birth */}
                   <div className="col">
-                    <label for="dob">Date of birth :</label>
-                    <input type="date" className="form-control" name="dob" />
+                    <label for="dob">Date of birth : </label>
+                    <input type="date" className="form-control" name="dob" value={formfields.dob} onChange={(e)=> setFormfields({...formfields, dob : e.target.value})}/>
                   </div>
                   {/* Blood group */}
                   <div className="col">
@@ -88,11 +96,11 @@ const Modal1 = ({ handleSubmit, modal, setModal }) => {
                       Gender?
                     </label>
                     <label className="radio-inline">{" "}
-                      <input type="radio" name="gender" value="female" /> Female
+                      <input type="radio" name="gender" value="female" onChange={(e)=> setFormfields({...formfields, gender : e.target.value})}/> Female 
                     </label>{" "}
                     &nbsp;
                     <label className="radio-inline">
-                      <input type="radio" name="gender" value="male" /> Male
+                      <input type="radio" name="gender" value="male" onChange={(e)=> setFormfields({...formfields, gender : e.target.value})}/> Male 
                     </label>
                   </div>
                   <div className="col">

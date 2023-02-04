@@ -3,22 +3,29 @@ import './Modal.css'
 
 const Modal3 = ({handleSubmit, modal, setModal}) => {
 
+    const [formfields, setFormfields] = useState({
+        'profile' : '',
+        'fname': '',
+        'dob' : '', 
+        'gender': ''
+      });    
+
     return (
 <div>
     {!modal ? (
     <div className="container-lg">
         <p className='threeD'>Researcher Data</p>
-        <form id="modal" className='modal-box' onSubmit={handleSubmit}>
+        <form id="modal" className='modal-box' onSubmit={handleSubmit} enctype="multipart/form-data">
         <div className='row'>
             <div className='column left'>
-            <div className="custom-file m-4">
-            <input type="file" className="custom-file-input" name='profile' />
-            <label className="custom-file-label mr-5" for="customFile">Choose profile image</label>
+            <div className="m-4">
+            <label className="mr-5">Profile Image : </label><br/>
+            <input type="file" name='profile' value={formfields.profile} onChange={(e)=>setFormfields({...formfields, profile : e.target.value})}/>
             </div> 
 
             <div className="row m-3">
                 <div className="col">
-                <input type="text" className="form-control" name='fname' placeholder="First name" />
+                <input type="text" className="form-control" name='fname' value={formfields.fname} onChange={(e)=>setFormfields({...formfields, fname : e.target.value})} placeholder="First name" />
                 </div>
                 <div className="col">
                 <input type="text" className="form-control" name='mname' placeholder="Middle name" />
@@ -31,7 +38,7 @@ const Modal3 = ({handleSubmit, modal, setModal}) => {
             <div className="row m-3">
                 <div className="col">
                 <label for="dob">Date of birth :</label>
-                <input type="date" className="form-control" name='dob' />
+                <input type="date" className="form-control" name='dob' value={formfields.dob} onChange={(e)=>setFormfields({...formfields, dob : e.target.value})}/>
                 </div>
                 <div>
 
@@ -67,7 +74,7 @@ const Modal3 = ({handleSubmit, modal, setModal}) => {
 
             <div className="row m-3">
                 <div className="col">
-                    <label className="mr-4" >Gender?</label>
+                    <label className="mr-4" value={formfields.gender} onChange={(e)=>setFormfields({...formfields, gender : e.target.value})}>Gender?</label>
                     <label className="radio-inline"> <input type="radio" name="gender" value="female" /> Female</label> &nbsp;
                     <label className="radio-inline"><input type="radio" name="gender" value="male" /> Male</label>
                 </div>

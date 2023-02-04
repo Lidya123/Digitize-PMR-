@@ -24,22 +24,27 @@ function Header () {
     return (
         <>
         <nav className="navbar navbar-light bg-nav">
+        {/* <nav className="navbar navbar-light"> */}
+            <div className='nav-flex' >
+                <div>
+                    <img className='mt-2' src="https://cpha.com/wp-content/uploads/2017/10/Digital-Health-Logo.png" alt="BigCo Inc. logo" width="200" height="60"/>
+                </div>
+                <div className='btn-rgt mt-4'>
+                    <form className="form-inline ">
+                        <p className="nav-item dropdown">
 
-        <nav className="navbar navbar-light">
-        <img className='mt-2' src="https://cpha.com/wp-content/uploads/2017/10/Digital-Health-Logo.png" alt="BigCo Inc. logo" width="200" height="60"/>
-            <form className="form-inline float-right mx-">
-            <p className="nav-item dropdown">
-
-            <button className='btn btn-secondary' data-toggle="dropdown" >Access</button>
-            <div className="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdown">
-                <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleUsrEntry}> Patient</Link>
-                <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleDocEntry}>Doctor</Link>    
+                        <button className='btn btn-secondary' data-toggle="dropdown" >Access</button>
+                        <div className="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdown">
+                            <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleUsrEntry}> Patient</Link>
+                            <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleDocEntry}>Doctor</Link>    
+                        </div>
+                            <Link to='/home' className="btn btn-secondary float-right mx-5 row-6
+                            ">Home</Link>
+                        </p>
+                    </form>
+                </div>
             </div>
-            <Link to='/home' className="btn btn-secondary float-right mx-5 row-6
-            ">Home</Link>
-            </p>
-        </form>
-        </nav>
+        {/* </nav>s */}
         </nav>
 
         {usrModal && (

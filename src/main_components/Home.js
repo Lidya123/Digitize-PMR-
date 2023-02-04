@@ -15,12 +15,12 @@ const Home = () => {
     // };
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
-        const profileImage = e.target.profile.value;
-        const firstName = e.target.fname.value;
-        const dateOfBirth = e.target.dob.value;
-        const gender = e.target.gender.value;
-        console.log("Profile Image: "+profileImage,"\nFirst Name: "+firstName, "\nDOB: "+dateOfBirth, "\nGender: "+gender);
+        // e.preventDefault();
+        // const profileImage = e.target.profile.value;
+        // const firstName = e.target.fname.value;
+        // const dateOfBirth = e.target.dob.value;
+        // const gender = e.target.gender.value;
+        // console.log("Profile Image: "+profileImage,"\nFirst Name: "+firstName, "\nDOB: "+dateOfBirth, "\nGender: "+gender);
         setModal(true);
     }
 
