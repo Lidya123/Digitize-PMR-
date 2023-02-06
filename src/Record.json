@@ -1,0 +1,101 @@
+[
+    {
+        "id" : 1, 
+        "age" : 21,
+        "gender" : "Female",
+        "disease" : "Pneunomia",
+        "status": "curable",
+        "diagnosis" : "vacines | antibiotics",
+        "prescription" : "Cipro | Levaquin | Oracia"
+    },
+    {
+        "id" : 2, 
+        "age" : 30,
+        "gender" : "Male",
+        "disease" : "Cancer",
+        "status": "curable",
+        "diagnosis" : "biopsy | surgery | radiation therapy",
+        "prescription" : "must be treated at the earliest"
+    },
+    {
+        "id" : 3, 
+        "age" : 50,
+        "gender" : "Female",
+        "disease" : "Cancer",
+        "status": "non-curable",
+        "diagnosis" : "antibodies against cancer specific | chemotherapy",
+        "prescription" : ""
+    },
+    {
+        "id" : 4, 
+        "age" : 7,
+        "gender" : "Female",
+        "disease" : "Typhoid",
+        "status": "curable",
+        "diagnosis" : "",
+        "prescription" : ""
+    }, 
+    {
+        "id" : 5, 
+        "age" : 21,
+        "gender" : "Female",
+        "disease" : "Pneunomia",
+        "status": "curable",
+        "diagnosis" : "vacines, antibiotics",
+        "prescription" : "Cipro | Levaquin | Oracia"
+    },
+    {
+        "id" : 6,  
+        "age" : 35,
+        "gender" : "Male",
+        "disease" : "Fever",
+        "status": "curable",
+        "diagnosis" : "",
+        "prescription" : "Dolo | Crocin | Combiflam"
+    },
+    {
+        "id" : 7, 
+        "age" : 72,
+        "gender" : "Male",
+        "disease" : "Cancer",
+        "status": "curable",
+        "diagnosis" : "biopsy | surgery | radiation therapy",
+        "prescription" : "must be treated at the earliest"
+    },
+    {
+        "id" : 8, 
+        "age" : 67,
+        "gender" : "Male",
+        "disease" : "Cancer",
+        "status": "curable",
+        "diagnosis" : "biopsy | surgery | radiation therapy",
+        "prescription" : "must be treated at the earliest"
+    },
+    {
+        "id" : 9, 
+        "age" : 29,
+        "gender" : "Male",
+        "disease" : "Cough",
+        "status": "curable",
+        "diagnosis" : "Transofine DX",
+        "prescription" : "salt water gargle is suggested once a day"
+    },
+    {
+        "id" : 10, 
+        "age" : 40,
+        "gender" : "Male",
+        "disease" : "Cancer",
+        "status": "curable",
+        "diagnosis" : "biopsy | surgery | radiation therapy",
+        "prescription" : "must be treated at the earliest"
+    },
+    {
+        "id" : 11, 
+        "age" : 32,
+        "gender" : "Female",
+        "disease" : "Cancer",
+        "status": "curable",
+        "diagnosis" : "biopsy | surgery | radiation therapy",
+        "prescription" : "must be treated at the earliest"
+    }
+]

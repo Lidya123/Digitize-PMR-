@@ -1,8 +1,10 @@
 import React,{useState} from "react";
+import { useNavigate } from "react-router-dom";
 import "./Modal.css";
 
-const Modal2 = ({ handleSubmit, modal, setModal }) => {
+const Modal2 = ({handleSubmit, modal}) => {
 
+  const navigate = useNavigate();
   const [formfields, setFormfields] = useState({
     'profile' : '',
     'fname': '',
@@ -14,7 +16,7 @@ const Modal2 = ({ handleSubmit, modal, setModal }) => {
     <>
       {!modal ? (
         <div className="container-lg">
-          <p className="threeD">Doctor Data</p>
+          <h4 style={{"textAlign":"left"}} >Doctor Data</h4>
           <div id="modal" className="row modal-box">
             <form className="column left" onSubmit={handleSubmit} enctype="multipart/form-data">
               <div className="m-4">
@@ -87,6 +89,10 @@ const Modal2 = ({ handleSubmit, modal, setModal }) => {
                   &nbsp;
                   <label className="radio-inline">
                     <input type="radio" value="male" name="gender" /> Male
+                  </label>{" "}
+                  &nbsp;
+                  <label className="radio-inline">
+                    <input type="radio" value="transgender" name="gender" /> Transgender
                   </label>
                 </div>
                 <div className="col">
@@ -143,21 +149,28 @@ const Modal2 = ({ handleSubmit, modal, setModal }) => {
         <div className="modalBackground">
           <div className="modalContainer">
             <div className="title">
-              <div className="text-right mr-1">
-                <button className="btn btn-outline-danger" onClick={() => { setModal(false); }}> X </button>
-              </div>
-              <div className="title">
-                <h3>Registeration Successfull!</h3>
-              </div>
-              <div className="body">
-                <p>
-                  Your Public key : public_key <br />
-                  Your Private key : private_key <br />
-                  Your nft ID : doc_nft_id
-                </p>
-              </div>
+              <h4 className="text-center">Registeration Successfull!&nbsp;</h4>
+              <p className="btn btn-outline-danger titleCloseBtn"
+                 onClick={() => navigate('/home')}> 
+                 X 
+              </p>
             </div>
-          </div>
+            <div className="box">
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Public key : <small>MIIBCgKCAQEA+xGZ/wcz9ugFpP07Nspo6U17l0YhFiFpxxU4pTk3Lifz9R3zsIsuERwta7+fWIfxOo208ett/jhskiVodSEt3QBGh4XBipyWopKwZ93HHaDVZAALi/2A+xTBtWdEo7XGUujKDvC2/aZKukfjpOiUI8AhLAfjmlcD/UZ1QPh0mHsglRNCmpCwmwSXA9VNmhz+PiB+Dml4WWnKW/VHo2ujTXxq7+efMU4H2fny3Se3KYOsFPFGZ1TNQSYlFuShWrHPtiLmUdPoP6CV2mML1tk+l7DIIqXrQhLUKDACeM5roMx0kLhUWB8P+0uj1CNlNN4JRZlC7xFfqiMbFRU9Z4N6YwIDAQAB</small>
+                </p>
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Private key : <small>MIIBCgKCAQEA+xGZ/wcz9ugFpP07Nspo6U17l0YhFiFpxxU4pTk3Lifz9R3zsIsuERwta7+fWIfxOo208ett/jhskiVodSEt3QBGh4XBipyWopKwZ93HHaDVZAALi/2A+xTBtWdEo7XGUujKDvC2/aZKukfjpOiUI8AhLAfjmlcD/UZ1QPh0mHsglRNCmpCwmwSXA9VNmhz+PiB+Dml4WWnKW/VHo2ujTXxq7+efMU4H2fny3Se3KYOsFPFGZ1TNQSYlFuShWrHPtiLmUdPoP6CV2mML1tk+l7DIIqXrQhLUKDACeM5roMx0kLhUWB8P+0uj1CNlNN4JRZlC7xFfqiMbFRU9Z4N6YwIDAQAB</small>
+                </p>
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Nft ID : <small>MIIBCgKCAQEA+xGZ/+//2A+/aZKukfjpOiUI8AhLAfjmlcD/UZ1QPh0mHsglRNCmpCwmwSXA9VNmhz+PiB+Dml4WWnKW/VHo2ujTXxq7+efMU4H2fny3Se3KYOsFPFGZ1TNQSYlFuShWrHPtiLmUdPoP6CV2mML1tk+l7DIIqXrQhLUKDACeM5roMx0kLhUWB8P+0uj1CNlNN4JRZlC7xFfqiMbFRU9Z4N6YwIDAQAB</small>
+                </p>
+                <p className="btn btn-outline-dark m-1" 
+                onClick={() => navigate('/access')}>
+                  Proceed
+              </p>
+            </div>
+          </div>  
         </div>
       )}
     </>

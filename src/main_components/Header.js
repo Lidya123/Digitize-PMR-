@@ -22,29 +22,17 @@ function Header () {
     }
 
     return (
-        <>
-        <nav className="navbar navbar-light bg-nav">
-        {/* <nav className="navbar navbar-light"> */}
+        <div>
+        <nav className="navbar navbar-light bg-light header">
             <div className='nav-flex' >
                 <div>
-                    <img className='mt-2' src="https://cpha.com/wp-content/uploads/2017/10/Digital-Health-Logo.png" alt="BigCo Inc. logo" width="200" height="60"/>
+                    <img src="https://www.digitalhealth.net/includes/features/2016/sr/intero/img/digitalhealth-logo.jpg" alt="BigCo Inc. logo" width="250" height="80"/>
                 </div>
                 <div className='btn-rgt mt-4'>
-                    <form className="form-inline ">
-                        <p className="nav-item dropdown">
-
-                        <button className='btn btn-secondary' data-toggle="dropdown" >Access</button>
-                        <div className="dropdown-menu dropdown-menu-right bg-warning" aria-labelledby="navbarDropdown">
-                            <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleUsrEntry}> Patient</Link>
-                            <Link to='/pop' className='dropdown-item fw-bold' onClick={toggleDocEntry}>Doctor</Link>    
-                        </div>
-                            <Link to='/home' className="btn btn-secondary float-right mx-5 row-6
-                            ">Home</Link>
-                        </p>
-                    </form>
+                    <Link to='/access' className='btn btn-dark'>Access</Link>
+                    <Link to='/home' className="btn btn-dark float-right mx-5 row-6">Home</Link>
                 </div>
             </div>
-        {/* </nav>s */}
         </nav>
 
         {usrModal && (
@@ -99,8 +87,7 @@ function Header () {
                             </form >
                         </div>
                 )}
-                {/* </nav> */}
-            </>
+            </div>
         );
     }
 

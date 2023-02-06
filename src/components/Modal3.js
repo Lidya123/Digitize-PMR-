@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Modal.css'
 
-const Modal3 = ({handleSubmit, modal, setModal}) => {
+const Modal3 = ({handleSubmit, modal}) => {
 
+    const navigate = useNavigate();
     const [formfields, setFormfields] = useState({
         'profile' : '',
         'fname': '',
@@ -14,9 +16,8 @@ const Modal3 = ({handleSubmit, modal, setModal}) => {
 <div>
     {!modal ? (
     <div className="container-lg">
-        <p className='threeD'>Researcher Data</p>
-        <form id="modal" className='modal-box' onSubmit={handleSubmit} enctype="multipart/form-data">
-        <div className='row'>
+        <h4 style={{"textAlign":"left"}}>Researcher Data</h4>
+        <form id="modal" className='row modal-box' onSubmit={handleSubmit} enctype="multipart/form-data">
             <div className='column left'>
             <div className="m-4">
             <label className="mr-5">Profile Image : </label><br/>
@@ -89,26 +90,35 @@ const Modal3 = ({handleSubmit, modal, setModal}) => {
                         <button style={{"color": "white"}} className="btn btn-outline-dark mt-4 mb-2">Submit</button>
                     </div>
                 </div>
-            <div className='column right'></div> </div>
+            <div className='column right'></div>
         </form>
     </div>
     ) : (
-        <div className='modalBackground'>
-            <div className='modalContainer'>
-                <div className='title'>
-                    <div className='text-right mr-1'>
-                         <button className='btn btn-outline-danger' onClick={() => {setModal(false)}}> X </button>
-                    </div>
-                    <div className="title">
-                        <h3>Registeration Successfull!</h3>
-                    </div>
-                        <p className='body'>
-                        Your Public key : public_key <br/>
-                        Your Private key : private_key <br/>
-                        Your nft ID : res_nft_id
-                    </p>
-                </div>
+        <div className="modalBackground">
+          <div className="modalContainer">
+            <div className="title">
+              <h4 className="text-center">Registeration Successfull!&nbsp;</h4>
+              <p className="btn btn-outline-danger titleCloseBtn"
+                 onClick={() => navigate('/home')}> 
+                 X 
+              </p>
             </div>
+             <div className="box">
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Public key : <small>public_key</small>
+                </p>
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Private key : <small>private_key</small>
+                </p>
+                <p className="border border-secondary rounded p-2 mb-1">
+                  Your Nft ID : <small>nft_id</small>
+                </p>
+                <p className="btn btn-outline-dark m-1" 
+                onClick={() => navigate('/access')}>
+                  Proceed
+              </p>
+              </div>
+          </div>  
         </div>
         )}
 </div>
