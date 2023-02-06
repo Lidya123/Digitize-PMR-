@@ -19,7 +19,8 @@ const WriteData =() => {
     const promptMsg = () => {
         if (window.confirm('Are you sure to update?'))
         {
-            navigate('/fetchData');
+            const open_doc = true;
+            navigate('/fetchData', {state : { open_doc : open_doc }});
         }
     }
 
