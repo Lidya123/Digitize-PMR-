@@ -6,7 +6,7 @@ const Verification = ({open_pat, open_doc, open_res}) => {
     const navigate = useNavigate();
     
     const navigateToFetchData =()=>{
-        if (open_doc == true){
+        if (open_doc === true){
         navigate("/fetchData", {state : {open_doc : open_doc} });
         }else{
         open_doc = false;
