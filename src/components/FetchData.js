@@ -1,12 +1,15 @@
-import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import Record from '../Record.json';
 
 const FetchData =() => {
     const navigate = useNavigate();
+    const location = useLocation();
+    // const open_doc = false;
+    const open_doc = location.state.open_doc;
 
     const navigateToWrite = () =>{
-        navigate("/writeData")
+        navigate("/writeData");
     }
 
     return (
@@ -20,9 +23,9 @@ const FetchData =() => {
                 <div className='border border-danger rounded-right m-2 p-2'>Prescription : {record.prescription}</div>
                 </div>)
             })}
-            <div className='text-center'>
+            {open_doc ? <div className='text-center'>
             <p className='btn btn-outline-dark' onClick={navigateToWrite}>Add Record</p>
-            </div>
+            </div> : ""}
         </div>
     );
 }
