@@ -10,12 +10,12 @@
   
  .modalContainer {
     display: flex;
-    margin: 200% 0% 0% 192%;
+    margin: 200% 0% 0% 200%;
     /* align-items: center; */
     /* justify-content: center; */
     max-width: 85rem;
     max-height: 30rem;
-    margin-top: 4rem;
+    margin-top: 10rem;
     border-radius: 12px;
     border-style: solid;
     border-color: #fff;
@@ -41,7 +41,9 @@
     text-align: center;
     margin: auto;
   } */
-
+.regis-success{
+  min-height: 100vh;
+}
 .inputs {
   text-align: center;
   margin-top: 5px;

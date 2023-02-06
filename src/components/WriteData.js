@@ -7,6 +7,7 @@ const WriteData =() => {
     const navigate = useNavigate();
     const [writeDataFields, setWriteDataFields] = useState(
         {
+         "date":"",
          "age":"",
          "gender":"", 
          "disease":"", 
@@ -34,9 +35,16 @@ const WriteData =() => {
                         <form className="requires-validation" novalidate onSubmit={promptMsg}>
 
                             <div className="col-md-12">
+                               <input className="form-control" type="date" name="data" placeholder="Currrent date" value={writeDataFields.date} required onChange={(e)=>{setWriteDataFields({...writeDataFields, date : e.target.value })}} />
+                                <div className="valid-feedback">Date</div>
+                               <div className="invalid-feedback">Date field cannot be blank!</div>
+                               {/* {writeDataFields.date} */}
+                            </div> 
+
+                            <div className="col-md-12 mt-3">
                                <input className="form-control" type="number" name="age" placeholder="Age" value={writeDataFields.age} required onChange={(e)=>{setWriteDataFields({...writeDataFields, age : e.target.value })}} />
                                 <div className="valid-feedback">Age</div>
-                               <div className="invalid-feedback">Username field cannot be blank!</div>
+                               <div className="invalid-feedback">Age field cannot be blank!</div>
                                {/* {writeDataFields.age} */}
                             </div> 
                             <div className="col-md-12 mt-3">
@@ -71,7 +79,7 @@ const WriteData =() => {
                             </div>
 
                            <div className="col-md-12">
-                              <input className="form-control" type="text" name="disgnosis" value={writeDataFields.diagnosis} placeholder="Diagnosis" required onChange={(e)=>{setWriteDataFields({...writeDataFields, diagnosis : e.target.value})}}/>
+                              <input className="form-control" type="text" name="disgnosis" value={writeDataFields.diagnosis} placeholder="Diagnosis (if required)" onChange={(e)=>{setWriteDataFields({...writeDataFields, diagnosis : e.target.value})}}/>
                               <small className='fw-light'>[ enter ',' data with a '|' ]</small>
                               {/* {writeDataFields.diagnosis} */}
                            </div>    

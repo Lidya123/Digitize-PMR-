@@ -23,8 +23,8 @@ function Header () {
 
     return (
         <div>
-        <nav className="navbar navbar-light bg-light header">
-            <div className='nav-flex' >
+        <nav className="navbar navbar-light bg-light">
+            <div className='nav-flex'>
                 <div>
                     <img src="https://www.digitalhealth.net/includes/features/2016/sr/intero/img/digitalhealth-logo.jpg" alt="BigCo Inc. logo" width="250" height="80"/>
                 </div>
